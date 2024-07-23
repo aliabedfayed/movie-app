@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Movie App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <div class="navbar">
+        <header class="d-flex">
+            <div class="side-nav min-vh-100 top-0 d-flex text-light">
+                <div class="nav-tab min-vh-100  bg-black ">
+                    <div class="list pt-4">
+                        <ul>
+                            <a>
+                                <li onclick="getPlayingNow()" class="py-2" id="nowPlaying">Now Playing</li>
+                            </a>
+                            <a>
+                                <li onclick="getPopular()" class="py-2" id="popular">Popular</li>
+                            </a>
+                            <a>
+                                <li onclick="getTopRated()" class="py-2" id="topRated">Top Rated</li>
+                            </a>
+                            <a>
+                                <li onclick="getTrending()" class="py-2" id="trending">Trending</li>
+                            </a>
+                            <a>
+                                <li onclick="getUpcoming()" class="py-2" id="upcoming">Upcoming</li>
+                            </a>
+                            <a href="#contactData">
+                                <li onclick="displayContacts()" class="py-2" id="contactUs">Contact Us</li>
+                            </a>
+
+                        </ul>
+                    </div>
+                    <div class="social-icons text-light ps-4">
+                        <i class="fab fa-facebook-f fa-fw"></i>
+                        <i class="fab fa-twitter fa-fw"></i>
+                        <i class="fa-solid fa-globe"></i>
+                        <div class="footer text-light fw-lighter"> Copyright © 2022 All Rights<br />Reserved.</div>
+                    </div>
+                </div>
+
+                <div
+                    class=" nav-header d-flex justify-content-between px-2 py-4 bg-white text-black text-center flex-column">
+                    <img src="images/logo.png" class="logo">
+                    <i class=" open fa-solid open-close-icon fa-2x fa-2 fa-align-justify"></i>
+                    <div class="icons">
+                        <i class="fa-solid fa-globe d-block"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    <!-- navbar end -->
+
+    <div class="home">
+        <div class="container">
+            <input onkeyup="search(this.value)" type="search" id="search"
+                class="form-control w-50 rounded-pill border-white text-white bg-transparent" placeholder="Search">
+            <div class="row g-5" id="demo">
+                <span class="loader m-auto my-5"></span>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container w-75 text-center">
+
+        </div>
+    </div>
+
+    <form id="contactData" class="py-5 mt-5 container">
+
+    </form>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
